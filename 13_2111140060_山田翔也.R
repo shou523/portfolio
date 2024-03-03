@@ -1,0 +1,8 @@
+library(MASS)
+head(birthwt)
+birthwt.glm <- glm(low~age+lwt+smoke+ptl+ht+ui, family=binomial(link="logit"),data=birthwt)
+#summary(birthwt.glm)
+step(birthwt.glm)
+birthwt.glm <- glm(low~age+lwt+smoke+ptl+ht+ui, family=binomial(link="logit"),data=birthwt)
+#summary(birthwt.glm)
+step(birthwt.glm)
